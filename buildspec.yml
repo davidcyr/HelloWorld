@@ -1,0 +1,12 @@
+version: 0.1
+
+# buildspec.yml for use with AWS CodeBuild
+
+phases:
+  build:
+    commands:
+      - mvn package
+
+artifacts:
+  files:
+    - target/myproject-0.0.1-SNAPSHOT.jar
