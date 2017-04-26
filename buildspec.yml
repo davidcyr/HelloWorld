@@ -2,10 +2,26 @@ version: 0.1
 
 # buildspec.yml for use with AWS CodeBuild
 
+
 phases:
+
+
+  install:
+    commands:
+      - echo Nothing to do in the install phase...
+
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+
   build:
     commands:
+      - echo In the build phase!
       - mvn package
+
+  post_build:
+    commands:
+      - echo Nothing to do in the post_build phase...
 
 artifacts:
   files:
